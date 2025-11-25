@@ -1,0 +1,130 @@
+.cursos-container {
+  padding: 30px 40px;
+  max-width: 70%;
+  margin: 0 auto;
+  min-height: calc(100vh - 140px);
+  width: 100%;
+}
+
+.cursos-title {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 3px solid #0052a3;
+  padding-bottom: 15px;
+}
+
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* Para pantallas muy grandes - máximo 4 columnas */
+@media (min-width: 1400px) {
+  .cursos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.curso-card-simple {
+  background-color: white;
+  border: 2px solid #00a8e8;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 3 / 4.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.curso-card-simple:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 168, 232, 0.2);
+  border-color: #0052a3;
+}
+
+.curso-icon-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+}
+
+.curso-icon-placeholder .books-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.curso-info-simple {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.curso-name-simple {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.curso-grupo-simple {
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  text-align: center;
+}
+
+.curso-action {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+.curso-action button {
+  width: 100%;
+  max-width: 200px;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .cursos-container {
+    padding: 20px;
+    max-width: 95%;
+  }
+
+  .cursos-title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .cursos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .curso-icon-large {
+    font-size: 60px;
+  }
+
+  .curso-name-simple {
+    font-size: 18px;
+  }
+}

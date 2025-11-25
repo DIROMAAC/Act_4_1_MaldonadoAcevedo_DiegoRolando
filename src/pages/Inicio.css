@@ -1,0 +1,75 @@
+.inicio-container {
+  padding: 30px 40px;
+  max-width: 70%;
+  margin: 0 auto;
+  min-height: calc(100vh - 140px);
+  width: 100%;
+}
+
+.cursos-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 2px solid #0052a3;
+  padding-bottom: 10px;
+}
+
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* Para pantallas muy grandes - máximo 4 columnas */
+@media (min-width: 1400px) {
+  .cursos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1200px) {
+  .inicio-container {
+    padding: 30px 35px;
+  }
+  
+  .cursos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .inicio-container {
+    padding: 25px 20px;
+  }
+
+  .cursos-title {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .cursos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .inicio-container {
+    padding: 20px 15px;
+  }
+
+  .cursos-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .cursos-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}

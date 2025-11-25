@@ -1,0 +1,42 @@
+.tutores-container {
+  padding: 30px 40px;
+  max-width: 70%;
+  margin: 0 auto;
+  min-height: calc(100vh - 140px);
+  width: 100%;
+}
+
+.tutores-search {
+  margin-bottom: 30px;
+}
+
+.tutores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* Para pantallas muy grandes - máximo 4 columnas */
+@media (min-width: 1400px) {
+  .tutores-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tutores-container {
+    padding: 20px;
+    max-width: 95%;
+  }
+
+  .tutores-search {
+    margin-bottom: 20px;
+  }
+
+  .tutores-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

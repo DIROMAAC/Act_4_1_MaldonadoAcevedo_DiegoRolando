@@ -1,0 +1,77 @@
+.contenido-curso {
+  background-color: white;
+  border: 2px solid #00a8e8;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contenido-curso:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 168, 232, 0.2);
+  border-color: #0077b6;
+}
+
+.contenido-info {
+  flex: 1;
+}
+
+.contenido-nombre {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.contenido-descripcion {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contenido-completado {
+  flex-shrink: 0;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #00a8e8;
+}
+
+.checkbox-label {
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .contenido-curso {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contenido-completado {
+    width: 100%;
+  }
+
+  .checkbox-container {
+    justify-content: flex-start;
+  }
+}
